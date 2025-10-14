@@ -1,6 +1,29 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SparkSafe - Mobile-first Wildfire Home-Hardening web app scaffold.
+
+Structure overview
+
+```
+src/
+  components/
+    common/           # Reusable UI (Button, Card, Badge, ...)
+    layout/           # Page chrome (Page, BottomNav)
+  pages/              # Route pages (Dashboard, Marketplace, ProductDetails, Profile, Cart)
+  styles/             # Global CSS and variables
+  types/              # Shared TS types
+```
+
+Tech
+- React + TypeScript
+- CSS Modules (.module.css)
+- React Router
+
+Getting started
+```
+npm install
+npm start
+```
 
 ## Available Scripts
 
