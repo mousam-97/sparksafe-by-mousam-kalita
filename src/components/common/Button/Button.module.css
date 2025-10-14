@@ -1,0 +1,36 @@
+.button {
+	appearance: none;
+	border: none;
+	padding: var(--space-3) var(--space-5);
+	border-radius: var(--radius-round);
+	font-size: var(--font-size-md);
+	font-weight: 600;
+	cursor: pointer;
+	transition: transform 120ms ease, filter 120ms ease;
+}
+
+.primary {
+	background: var(--color-primary);
+	color: var(--color-primary-contrast);
+	box-shadow: var(--shadow-sm);
+}
+
+.secondary {
+	background: var(--color-muted);
+	color: var(--color-text);
+}
+
+.ghost {
+	background: transparent;
+	color: var(--color-text);
+	border: 1px solid var(--color-border);
+}
+
+.fullWidth {
+	width: 100%;
+}
+
+.button:active {
+	transform: translateY(1px);
+}
+

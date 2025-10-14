@@ -1,0 +1,19 @@
+.wrapper {
+	min-height: 100dvh;
+	max-width: 480px; /* mobile-first narrow phone width */
+	margin: 0 auto;
+	padding: var(--space-4);
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: var(--space-4);
+}
+
+.title {
+	font-weight: 800;
+	font-size: 22px;
+}
+
