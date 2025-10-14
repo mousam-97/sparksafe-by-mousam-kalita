@@ -1,0 +1,35 @@
+.base {
+	margin: 0;
+	color: var(--color-text);
+	line-height: 1.5;
+}
+
+.title {
+	font-size: var(--font-size-xl);
+	font-weight: 700;
+}
+
+.subtitle {
+	font-size: var(--font-size-lg);
+	font-weight: 600;
+}
+
+.body {
+	font-size: var(--font-size-md);
+	font-weight: 400;
+}
+
+.caption {
+	font-size: var(--font-size-sm);
+	font-weight: 400;
+}
+
+.muted {
+	color: var(--color-text-muted);
+}
+
+.center {
+	text-align: center;
+}
+
+
