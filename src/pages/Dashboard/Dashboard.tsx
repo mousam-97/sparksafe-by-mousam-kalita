@@ -4,16 +4,14 @@ import Button from "../../components/common/Button/Button";
 import Badge from "../../components/common/Badge/Badge";
 import List from "../../components/common/List/List";
 import ListItem from "../../components/common/ListItem/ListItem";
-import styles from "./Dashboard.module.css";
+import ProgressBar from "../../components/common/ProgressBar/ProgressBar";
 
 export default function Dashboard() {
 	return (
 		<Page title="My Wildfire Hardening Plan">
 			<div>
 				<div>Overall Progress</div>
-				<div className={styles.progress}>
-					<div className={styles.bar} />
-				</div>
+				<ProgressBar value={45} label="You're 45% of the way to a safer home!" />
 				<List>
 					<ListItem
 						title="Clear Defensible Space"
@@ -34,5 +32,3 @@ export default function Dashboard() {
 		</Page>
 	);
 }
-
-
