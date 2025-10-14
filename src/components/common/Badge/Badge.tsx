@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Badge.module.css";
+import cx from "classnames";
 
 type BadgeProps = {
 	children: React.ReactNode;
@@ -8,9 +9,7 @@ type BadgeProps = {
 };
 
 export default function Badge({ children, variant = "default", className }: BadgeProps) {
-	const classNames = [styles.badge, variant !== "default" ? styles[variant] : undefined, className]
-		.filter(Boolean)
-		.join(" ");
+	const classNames = cx(styles.badge, { [styles.success]: variant === "success" }, className);
 	return <span className={classNames}>{children}</span>;
 }
 

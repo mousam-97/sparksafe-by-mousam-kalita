@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Button.module.css";
+import cx from "classnames";
 
 type ButtonVariant = "primary" | "secondary" | "ghost";
 
@@ -15,9 +16,12 @@ export default function Button({
 	children,
 	...rest
 }: ButtonProps) {
-	const classNames = [styles.button, styles[variant], fullWidth ? styles.fullWidth : undefined, className]
-		.filter(Boolean)
-		.join(" ");
+	const classNames = cx(
+		styles.button,
+		styles[variant],
+		{ [styles.fullWidth]: fullWidth },
+		className
+	);
 
 	return (
 		<button className={classNames} {...rest}>
