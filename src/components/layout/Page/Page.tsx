@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Page.module.css";
+import Brand from "../../common/Brand/Brand";
 
 type PageProps = {
 	title?: string;
@@ -10,12 +11,11 @@ type PageProps = {
 export default function Page({ title, actions, children }: PageProps) {
 	return (
 		<div className={styles.wrapper}>
-			{title || actions ? (
-				<header className={styles.header}>
-					{title ? <div className={styles.title}>{title}</div> : <div />}
-					{actions}
-				</header>
-			) : null}
+			<header className={styles.header}>
+				<Brand />
+				{actions}
+			</header>
+			{title ? <div className={styles.title}>{title}</div> : null}
 			{children}
 		</div>
 	);

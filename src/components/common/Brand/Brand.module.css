@@ -1,0 +1,21 @@
+.wrap {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--space-2);
+}
+
+.logo {
+	width: 28px;
+	height: 28px;
+	display: inline-grid;
+	place-items: center;
+	border-radius: 8px;
+	background: color-mix(in srgb, var(--color-danger) 15%, white);
+	box-shadow: var(--shadow-sm);
+}
+
+.name {
+	font-weight: 800;
+	letter-spacing: 0.2px;
+}
+
