@@ -3,20 +3,23 @@ import styles from "./Card.module.css";
 import cx from "classnames";
 
 type CardProps = {
-	title?: React.ReactNode;
-	footer?: React.ReactNode;
 	children?: React.ReactNode;
 	className?: string;
+	muted?: boolean;
 };
 
-export default function Card({ title, footer, children, className }: CardProps) {
+export default function Card({ children, className, muted = false }: CardProps) {
 	return (
-		<div className={cx(styles.card, className)}>
-			{title ? <div className={styles.header}>{title}</div> : null}
+		<div className={cx(styles.card, { [styles.muted]: muted }, className)}>
 			<div>{children}</div>
-			{footer ? <div className={styles.footer}>{footer}</div> : null}
 		</div>
 	);
 }
 
+export function CardHeader({ children }: { children?: React.ReactNode }) {
+	return <div className={styles.header}>{children}</div>;
+}
 
+export function CardFooter({ children }: { children?: React.ReactNode }) {
+	return <div className={styles.footer}>{children}</div>;
+}

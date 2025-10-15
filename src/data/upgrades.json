@@ -7,7 +7,8 @@
 		"resiliencyScoreGain": 10,
 		"details": "Clear leaves, dead plants, and pine needles. Keep trees trimmed and shrubs pruned.",
 		"estimatedCost": "Low",
-		"estimatedDifficulty": "Medium"
+		"estimatedDifficulty": "Medium",
+		"sortOrder": 1
 	},
 	{
 		"id": "u2",
@@ -17,7 +18,8 @@
 		"resiliencyScoreGain": 5,
 		"details": "Choose metal or fire-resistant guards; clean gutters twice a year.",
 		"estimatedCost": "Low",
-		"estimatedDifficulty": "Easy"
+		"estimatedDifficulty": "Easy",
+		"sortOrder": 3
 	},
 	{
 		"id": "u3",
@@ -27,7 +29,8 @@
 		"resiliencyScoreGain": 15,
 		"details": "Tempered glass withstands higher heat and reduces breakage risk.",
 		"estimatedCost": "High",
-		"estimatedDifficulty": "Hard"
+		"estimatedDifficulty": "Hard",
+		"sortOrder": 6
 	},
 	{
 		"id": "u4",
@@ -37,7 +40,8 @@
 		"resiliencyScoreGain": 20,
 		"details": "Seal gaps and maintain roof-to-wall junctions to block ember intrusion.",
 		"estimatedCost": "High",
-		"estimatedDifficulty": "Hard"
+		"estimatedDifficulty": "Hard",
+		"sortOrder": 7
 	},
 	{
 		"id": "u5",
@@ -47,7 +51,8 @@
 		"resiliencyScoreGain": 12,
 		"details": "Prioritize eaves, soffit, and foundation vents to reduce ember entry.",
 		"estimatedCost": "Medium",
-		"estimatedDifficulty": "Medium"
+		"estimatedDifficulty": "Medium",
+		"sortOrder": 2
 	},
 	{
 		"id": "u6",
@@ -57,7 +62,8 @@
 		"resiliencyScoreGain": 18,
 		"details": "Avoid vinyl or untreated wood near ground level; maintain 6-inch clearance.",
 		"estimatedCost": "High",
-		"estimatedDifficulty": "Hard"
+		"estimatedDifficulty": "Hard",
+		"sortOrder": 8
 	},
 	{
 		"id": "u7",
@@ -67,7 +73,8 @@
 		"resiliencyScoreGain": 14,
 		"details": "Move mulch, wood piles, and combustible decor outside 5 feet.",
 		"estimatedCost": "Medium",
-		"estimatedDifficulty": "Medium"
+		"estimatedDifficulty": "Medium",
+		"sortOrder": 4
 	},
 	{
 		"id": "u8",
@@ -77,7 +84,8 @@
 		"resiliencyScoreGain": 6,
 		"details": "Check weatherstripping and add bottom seal; ensure self-closing functionality.",
 		"estimatedCost": "Low",
-		"estimatedDifficulty": "Easy"
+		"estimatedDifficulty": "Easy",
+		"sortOrder": 5
 	},
 	{
 		"id": "u9",
@@ -87,7 +95,8 @@
 		"resiliencyScoreGain": 11,
 		"details": "Clean debris between boards; add metal flashing at deck-to-wall connections.",
 		"estimatedCost": "Medium",
-		"estimatedDifficulty": "Medium"
+		"estimatedDifficulty": "Medium",
+		"sortOrder": 9
 	},
 	{
 		"id": "u10",
@@ -97,7 +106,8 @@
 		"resiliencyScoreGain": 7,
 		"details": "Automate with timer; prioritize roof edges, eaves, and defensible space zones.",
 		"estimatedCost": "Medium",
-		"estimatedDifficulty": "Medium"
+		"estimatedDifficulty": "Medium",
+		"sortOrder": 10
 	}
 ]
 

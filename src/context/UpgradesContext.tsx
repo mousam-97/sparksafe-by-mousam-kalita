@@ -4,7 +4,7 @@ import type { Upgradable, UpgradableMap } from "../types";
 
 type UpgradesContextValue = {
 	upgradesById: UpgradableMap;
-	allUpgradeIds: string[];
+	allUpgradeIds: string[]; // sorted list used for rendering
 	completedById: Record<string, boolean>;
 	totalScore: number; // sum of all scoreGain
 	progress: number; // 0-100
@@ -26,6 +26,7 @@ function mapJsonToUpgradablesMap(): { upgradesById: UpgradableMap; allUpgradeIds
 			emoji: u.emoji,
 			estimatedCost: u.estimatedCost,
 			estimatedDifficulty: u.estimatedDifficulty,
+			sortOrder: typeof u.sortOrder === "number" ? u.sortOrder : undefined,
 		};
 		return [upgradable.id, upgradable];
 	});
@@ -64,25 +65,34 @@ export function UpgradesProvider({ children }: { children: React.ReactNode }) {
 		setCompletedById((prev) => (prev[id] ? prev : { ...prev, [id]: true }));
 	}, []);
 
+	// Provide a sorted list of IDs. Incomplete first; then by sortOrder asc; then by score desc.
+	const sortedIds = useMemo(() => {
+		const ids = [...allUpgradeIds];
+		ids.sort((a, b) => {
+			const aDone = !!completedById[a];
+			const bDone = !!completedById[b];
+			if (aDone !== bDone) return aDone ? 1 : -1; // incomplete first
+			const aOrder = upgradesById[a]?.sortOrder ?? Number.MAX_SAFE_INTEGER;
+			const bOrder = upgradesById[b]?.sortOrder ?? Number.MAX_SAFE_INTEGER;
+			if (aOrder !== bOrder) return aOrder - bOrder;
+			const aScore = upgradesById[a]?.scoreGain ?? 0;
+			const bScore = upgradesById[b]?.scoreGain ?? 0;
+			return bScore - aScore;
+		});
+		return ids;
+	}, [allUpgradeIds, completedById, upgradesById]);
+
 	const value = useMemo<UpgradesContextValue>(
 		() => ({
 			upgradesById,
-			allUpgradeIds,
+			allUpgradeIds: sortedIds,
 			completedById,
 			totalScore,
 			progress,
 			toggleComplete,
 			markComplete,
 		}),
-		[
-			upgradesById,
-			allUpgradeIds,
-			completedById,
-			totalScore,
-			progress,
-			toggleComplete,
-			markComplete,
-		]
+		[upgradesById, sortedIds, completedById, totalScore, progress, toggleComplete, markComplete]
 	);
 	return <UpgradesContext.Provider value={value}>{children}</UpgradesContext.Provider>;
 }

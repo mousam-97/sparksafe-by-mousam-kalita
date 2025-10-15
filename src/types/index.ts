@@ -34,6 +34,7 @@ export type Upgradable = {
 	emoji?: string;
 	estimatedCost: "Low" | "Medium" | "High";
 	estimatedDifficulty: "Easy" | "Medium" | "Hard";
+	sortOrder?: number;
 };
 
 export type UpgradableMap = Record<string, Upgradable>;

@@ -6,6 +6,12 @@
 	padding: var(--space-4);
 }
 
+.muted {
+    background: var(--color-surface);
+    filter: grayscale(0.2);
+    opacity: 0.8;
+}
+
 .header {
 	margin-bottom: var(--space-2);
 	font-weight: 700;

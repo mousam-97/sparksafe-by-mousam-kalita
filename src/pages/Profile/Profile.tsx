@@ -6,14 +6,14 @@ import styles from "./Profile.module.css";
 export default function Profile() {
 	return (
 		<Page title="Profile">
-			<div className={styles.list}>
+			{/* <div className={styles.list}>
 				<Card title="Account">
 					<div>Email: user@example.com</div>
 				</Card>
 				<Card title="Address">
 					<div>123 Wildfire Rd, Safe City</div>
 				</Card>
-			</div>
+			</div> */}
 		</Page>
 	);
 }

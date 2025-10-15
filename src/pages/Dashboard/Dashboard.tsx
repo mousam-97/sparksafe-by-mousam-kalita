@@ -6,9 +6,12 @@ import List, { ListItem } from "../../components/common/List/List";
 import ProgressBar from "../../components/common/ProgressBar/ProgressBar";
 import { useUpgrades } from "../../context/UpgradesContext";
 import Row, { Space } from "../../components/common/Grid/Grid";
-import Card from "../../components/common/Card/Card";
+import Card, { CardFooter, CardHeader } from "../../components/common/Card/Card";
 import Text from "../../components/common/Text/Text";
 import styles from "./Dashboard.module.css";
+import DashboardUpgradablesDetailsModal from "./DashboardUpgradablesDetailsModal";
+import { useState } from "react";
+import { useToast } from "../../components/common/Toast/Toast";
 
 // simple helper to render a decorative left icon box
 const IconBox = ({ emoji }: { emoji: string }) => (
@@ -19,6 +22,8 @@ const IconBox = ({ emoji }: { emoji: string }) => (
 
 export default function Dashboard() {
 	const { allUpgradeIds, upgradesById, progress, completedById, markComplete } = useUpgrades();
+	const [openId, setOpenId] = useState<string | null>(null);
+	const { showToast } = useToast();
 
 	return (
 		<Page title="My Wildfire Hardening Plan">
@@ -39,37 +44,56 @@ export default function Dashboard() {
 						const isDone = !!completedById[id];
 						return (
 							<ListItem key={u.id}>
-								<Card
-									title={
+								<Card muted={isDone}>
+									<CardHeader>
 										<Row align="center" justify="between" gap={3}>
 											<Row align="center" gap={3}>
 												<IconBox emoji={u.emoji ?? "🌿"} />
-												<Text as="div" variant="title">
-													{u.title}
-												</Text>
+												<Text variant="subtitle">{u.title}</Text>
 											</Row>
 											<Badge variant="success">+{u.scoreGain}</Badge>
 										</Row>
-									}
-									footer={
+									</CardHeader>
+									<Text variant="body">{u.description}</Text>
+									<CardFooter>
 										<Row gap={3} justify="end">
-											<Button variant="secondary">View Details</Button>
+											<Button
+												variant="secondary"
+												onClick={() => setOpenId(u.id)}
+											>
+												View Details
+											</Button>
 											<Button
 												variant={isDone ? "ghost" : "primary"}
-												onClick={() => markComplete(u.id)}
+												onClick={() => {
+													if (!isDone) {
+														markComplete(u.id);
+														showToast("Marked as complete!", "success");
+													}
+												}}
 												disabled={isDone}
 											>
 												{isDone ? "Completed" : "Mark as complete"}
 											</Button>
 										</Row>
-									}
-								>
-									<Text className={styles.description}>{u.description}</Text>
+									</CardFooter>
 								</Card>
 							</ListItem>
 						);
 					})}
 				</List>
+				<DashboardUpgradablesDetailsModal
+					open={!!openId}
+					upgradable={openId ? upgradesById[openId] : undefined}
+					isDone={openId ? !!completedById[openId] : false}
+					onMarkComplete={(id) => {
+						if (!completedById[id]) {
+							markComplete(id);
+							showToast("Marked as complete!", "success");
+						}
+					}}
+					onClose={() => setOpenId(null)}
+				/>
 			</div>
 		</Page>
 	);
