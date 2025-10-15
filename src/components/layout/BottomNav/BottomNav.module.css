@@ -12,9 +12,13 @@
 }
 
 .item {
-	text-align: center;
 	color: var(--color-text-muted);
 	font-size: var(--font-size-sm);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: var(--space-1);
 }
 
 .active {
