@@ -31,6 +31,7 @@ export type Upgradable = {
 	description: string;
 	details: string;
 	scoreGain: number;
+	emoji?: string;
 	estimatedCost: "Low" | "Medium" | "High";
 	estimatedDifficulty: "Easy" | "Medium" | "Hard";
 };

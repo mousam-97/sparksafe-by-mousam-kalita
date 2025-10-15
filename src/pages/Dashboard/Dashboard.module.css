@@ -3,3 +3,23 @@
 	gap: var(--space-4);
 }
 
+.sectionTitle {
+	font-weight: 600;
+}
+
+.description {
+	margin: 0;
+}
+
+.iconBox {
+	width: 44px;
+	height: 44px;
+	border-radius: var(--radius-md);
+	background: color-mix(in srgb, var(--color-success) 15%, white);
+	display: grid;
+	place-items: center;
+	color: #065f46;
+	font-size: 20px;
+	flex: 0 0 44px;
+}
+
