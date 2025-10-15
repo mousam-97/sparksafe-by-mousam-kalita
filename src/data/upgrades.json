@@ -1,73 +1,93 @@
 [
 	{
+		"id": "u1",
 		"task": "Clear Defensible Space",
 		"description": "Remove flammable vegetation and debris within 30 feet of the home.",
 		"resiliencyScoreGain": 10,
 		"details": "Clear leaves, dead plants, and pine needles. Keep trees trimmed and shrubs pruned.",
-		"estimated": { "cost": "Low", "difficulty": "Medium" }
+		"estimatedCost": "Low",
+		"estimatedDifficulty": "Medium"
 	},
 	{
+		"id": "u2",
 		"task": "Install Gutter Guards",
 		"description": "Prevent buildup of flammable debris in gutters.",
 		"resiliencyScoreGain": 5,
 		"details": "Choose metal or fire-resistant guards; clean gutters twice a year.",
-		"estimated": { "cost": "Low", "difficulty": "Easy" }
+		"estimatedCost": "Low",
+		"estimatedDifficulty": "Easy"
 	},
 	{
+		"id": "u3",
 		"task": "Upgrade to Tempered Glass Windows",
 		"description": "Replace single-pane windows with tempered dual-pane glass.",
 		"resiliencyScoreGain": 15,
 		"details": "Tempered glass withstands higher heat and reduces breakage risk.",
-		"estimated": { "cost": "High", "difficulty": "Hard" }
+		"estimatedCost": "High",
+		"estimatedDifficulty": "Hard"
 	},
 	{
+		"id": "u4",
 		"task": "Install Class A Roofing",
 		"description": "Use Class A rated materials like asphalt shingles or metal.",
 		"resiliencyScoreGain": 20,
 		"details": "Seal gaps and maintain roof-to-wall junctions to block ember intrusion.",
-		"estimated": { "cost": "High", "difficulty": "Hard" }
+		"estimatedCost": "High",
+		"estimatedDifficulty": "Hard"
 	},
 	{
+		"id": "u5",
 		"task": "Seal Vents with Ember-Resistant Covers",
 		"description": "Add 1/8-inch metal mesh or fire-rated vent covers.",
 		"resiliencyScoreGain": 12,
 		"details": "Prioritize eaves, soffit, and foundation vents to reduce ember entry.",
-		"estimated": { "cost": "Medium", "difficulty": "Medium" }
+		"estimatedCost": "Medium",
+		"estimatedDifficulty": "Medium"
 	},
 	{
+		"id": "u6",
 		"task": "Replace Siding with Fire-Resistant Material",
 		"description": "Upgrade to fiber-cement, stucco, or metal siding.",
 		"resiliencyScoreGain": 18,
 		"details": "Avoid vinyl or untreated wood near ground level; maintain 6-inch clearance.",
-		"estimated": { "cost": "High", "difficulty": "Hard" }
+		"estimatedCost": "High",
+		"estimatedDifficulty": "Hard"
 	},
 	{
+		"id": "u7",
 		"task": "Create Noncombustible Zone (0–5 ft)",
 		"description": "Use gravel, concrete, or pavers immediately around the home.",
 		"resiliencyScoreGain": 14,
 		"details": "Move mulch, wood piles, and combustible decor outside 5 feet.",
-		"estimated": { "cost": "Medium", "difficulty": "Medium" }
+		"estimatedCost": "Medium",
+		"estimatedDifficulty": "Medium"
 	},
 	{
+		"id": "u8",
 		"task": "Install Ember-Resistant Garage Door Seal",
 		"description": "Seal perimeter gaps to prevent ember entry.",
 		"resiliencyScoreGain": 6,
 		"details": "Check weatherstripping and add bottom seal; ensure self-closing functionality.",
-		"estimated": { "cost": "Low", "difficulty": "Easy" }
+		"estimatedCost": "Low",
+		"estimatedDifficulty": "Easy"
 	},
 	{
+		"id": "u9",
 		"task": "Upgrade Decking and Enclose Underdeck",
 		"description": "Use ignition-resistant decking and enclose underside with noncombustible material.",
 		"resiliencyScoreGain": 11,
 		"details": "Clean debris between boards; add metal flashing at deck-to-wall connections.",
-		"estimated": { "cost": "Medium", "difficulty": "Medium" }
+		"estimatedCost": "Medium",
+		"estimatedDifficulty": "Medium"
 	},
 	{
+		"id": "u10",
 		"task": "Install Exterior Sprinkler or Misting System",
 		"description": "Add targeted perimeter sprinklers for last-minute moisture barrier.",
 		"resiliencyScoreGain": 7,
 		"details": "Automate with timer; prioritize roof edges, eaves, and defensible space zones.",
-		"estimated": { "cost": "Medium", "difficulty": "Medium" }
+		"estimatedCost": "Medium",
+		"estimatedDifficulty": "Medium"
 	}
 ]
 
