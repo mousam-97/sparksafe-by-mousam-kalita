@@ -10,6 +10,7 @@ import Row, { Space } from "../../components/common/Grid/Grid";
 import Text from "../../components/common/Text/Text";
 import List, { ListItem } from "../../components/common/List/List";
 import Icon from "../../components/icons/Icon";
+import Badge from "../../components/common/Badge/Badge";
 
 export default function ProductDetails() {
 	const { id } = useParams();
@@ -106,6 +107,19 @@ export default function ProductDetails() {
 					<Text as="strong">Specifications</Text>
 				</div>
 				<List>
+					<ListItem>
+						<Text muted as="div">
+							Approval status:{" "}
+							<Badge
+								variant={p.approvalStatus === "approved" ? "success" : "default"}
+							>
+								{p.approvalStatus
+									? p.approvalStatus.charAt(0).toUpperCase() +
+									  p.approvalStatus.slice(1)
+									: "Unknown"}
+							</Badge>
+						</Text>
+					</ListItem>
 					<ListItem>
 						<Text muted as="div">
 							Category: {p.category ?? "General"}
