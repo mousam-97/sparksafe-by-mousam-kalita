@@ -51,7 +51,7 @@ export default function ProductDetails() {
 			<Button variant="secondary" onClick={() => navigate(-1)}>
 				<Icon name="arrowLeft" />
 			</Button>
-			<Space vertical size={2} />
+
 			<img className={styles.image} src={hero} alt={p.name} />
 			<Row columnDirection gap={1}>
 				<Text as="h2" variant="title">
