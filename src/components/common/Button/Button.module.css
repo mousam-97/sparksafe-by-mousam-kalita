@@ -16,7 +16,7 @@
 }
 
 .secondary {
-	background: var(--color-muted);
+	background: var(--color-secondary);
 	color: var(--color-text);
 }
 

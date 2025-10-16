@@ -15,11 +15,10 @@
 	width: 44px;
 	height: 44px;
 	border-radius: var(--radius-md);
-	background: color-mix(in srgb, var(--color-success) 15%, white);
+	background: var(--color-secondary);
 	display: grid;
 	place-items: center;
 	color: #065f46;
 	font-size: 20px;
 	flex: 0 0 44px;
 }
-

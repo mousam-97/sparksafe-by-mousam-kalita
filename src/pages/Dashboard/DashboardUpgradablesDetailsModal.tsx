@@ -48,12 +48,12 @@ export default function DashboardUpgradablesDetailsModal({
 						variant={isDone ? "ghost" : "primary"}
 						disabled={isDone}
 						onClick={() => onMarkComplete(u.id)}
-						size="sm"
+						size="md"
 					>
 						{isDone ? "Completed" : "Mark as complete"}
 					</Button>
 				</Row>
-				<Button variant="accent" onClick={() => {}} size="sm">
+				<Button variant="accent" onClick={() => {}} size="md">
 					Shop Products
 				</Button>
 			</ModalFooter>

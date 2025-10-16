@@ -1,9 +1,10 @@
 :root {
 	/* Brand colors */
 	--color-primary: #16a34a; /* green-600 */
+	--color-success: #22c55e; /* green-500 */
 	--color-primary-contrast: #ffffff;
 	--color-accent: #ec7f13; /* custom accent */
-	--color-success: #22c55e; /* green-500 */
+	--color-secondary: color-mix(in srgb, var(--color-success) 15%, white); /* light green for secondary buttons */
 	--color-warning: #f59e0b;
 	--color-danger: #ef4444; /* red-500 */
 

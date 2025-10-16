@@ -57,14 +57,7 @@ export default function Dashboard() {
 									<Text variant="body">{u.description}</Text>
 									<CardFooter>
 										<Row gap={3} justify="end">
-											<Button
-												variant="secondary"
-												onClick={() => setOpenId(u.id)}
-												size="sm"
-											>
-												View Details
-											</Button>
-											<Button
+											{/* <Button
 												variant={isDone ? "ghost" : "primary"}
 												onClick={() => {
 													if (!isDone) {
@@ -76,6 +69,17 @@ export default function Dashboard() {
 												size="sm"
 											>
 												{isDone ? "Completed" : "Mark as complete"}
+											</Button> */}
+
+											<Button variant="accent" onClick={() => {}} size="sm">
+												Shop
+											</Button>
+											<Button
+												variant="secondary"
+												onClick={() => setOpenId(u.id)}
+												size="sm"
+											>
+												View Details
 											</Button>
 										</Row>
 									</CardFooter>
