@@ -18,6 +18,7 @@
 	max-width: 520px;
 	width: calc(100% - var(--space-8));
 	padding: var(--space-5);
+	position: relative;
 }
 
 .header {
@@ -29,6 +30,27 @@
 	display: flex;
 	gap: var(--space-3);
 	justify-content: flex-end;
+}
+
+.closeButton {
+	position: absolute;
+	top: var(--space-3);
+	right: var(--space-3);
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	font-size: 20px;
+	line-height: 1;
+	color: var(--color-text-muted);
+	padding: var(--space-1);
+	border-radius: var(--radius-round);
+}
+
+.closeButton:hover,
+.closeButton:focus-visible {
+	color: var(--color-text);
+	background: var(--color-muted);
+	outline: none;
 }
 
 

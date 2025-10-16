@@ -8,7 +8,7 @@ import { useCart } from "../../../context/CartContext";
 
 export default function BottomNav() {
 	const { computed } = useCart();
-	const uniqueCount = computed.items.length;
+	const totalCount = computed.totals.itemCount;
 	return (
 		<nav className={styles.bar} aria-label="Main navigation">
 			{navItems.map(({ label, to, end, iconName }) => (
@@ -22,12 +22,12 @@ export default function BottomNav() {
 						<Icon name={iconName} />
 					</span>
 					<span>{label}</span>
-					{iconName === "cart" && uniqueCount > 0 ? (
+					{iconName === "cart" && totalCount > 0 ? (
 						<span
 							className={styles.cartBadge}
-							aria-label={`Cart has ${uniqueCount} items`}
+							aria-label={`Cart has ${totalCount} items`}
 						>
-							{uniqueCount}
+							{totalCount}
 						</span>
 					) : null}
 				</NavLink>

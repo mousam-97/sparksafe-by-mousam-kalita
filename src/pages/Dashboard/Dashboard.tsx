@@ -62,7 +62,12 @@ export default function Dashboard() {
 										<Row align="center" justify="between" gap={3}>
 											<Row align="center" gap={3}>
 												<IconBox emoji={u.emoji ?? "🌿"} />
-												<Text variant="subtitle">{u.title}</Text>
+												<Text variant="subtitle">
+													{u.title}{" "}
+													{isDone ? (
+														<Badge variant="success">completed</Badge>
+													) : null}
+												</Text>
 											</Row>
 											<Badge variant="success">+{u.scoreGain}</Badge>
 										</Row>

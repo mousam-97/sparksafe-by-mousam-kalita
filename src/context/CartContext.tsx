@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useMemo, useReducer } from "react";
 import type { CartContextValue, CartState, Product } from "../types";
 import { useProducts } from "./ProductsContext";
+import { localStorageGetItem, localStorageSetItem } from "../utils/StorageUtils";
 
 type CartAction =
 	| { type: "ADD_ITEM"; productId: string; quantity: number }
@@ -54,33 +55,26 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 	const [state, dispatch] = useReducer(cartReducer, { items: {} });
 	const { productsById } = useProducts();
 
-	// Hydrate from localStorage once
+	// Hydrate from storage once
 	useEffect(() => {
-		try {
-			const raw = localStorage.getItem(STORAGE_KEY);
-			if (raw) {
-				const parsed = JSON.parse(raw);
-				if (
-					parsed &&
-					parsed.items &&
-					typeof parsed.items === "object" &&
-					!Array.isArray(parsed.items)
-				) {
-					dispatch({
-						type: "HYDRATE",
-						state: { items: parsed.items as Record<string, number> },
-					});
-				}
-			}
-		} catch {}
+		const persisted = localStorageGetItem<CartState | undefined>(STORAGE_KEY, undefined);
+		if (
+			persisted &&
+			persisted.items &&
+			typeof persisted.items === "object" &&
+			!Array.isArray(persisted.items)
+		) {
+			dispatch({
+				type: "HYDRATE",
+				state: { items: persisted.items as Record<string, number> },
+			});
+		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
-	// Persist to localStorage
+	// Persist to storage
 	useEffect(() => {
-		try {
-			localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-		} catch {}
+		localStorageSetItem<CartState>(STORAGE_KEY, state);
 	}, [state]);
 
 	const computed = useMemo(() => {

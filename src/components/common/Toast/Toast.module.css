@@ -17,6 +17,7 @@
     padding: var(--space-3) var(--space-4);
     border-radius: var(--radius-round);
     font-weight: 700;
+    font-size: var(--font-size-sm);
     letter-spacing: 0.2px;
 }
 

@@ -11,6 +11,7 @@ import Text from "../../components/common/Text/Text";
 import List, { ListItem } from "../../components/common/List/List";
 import Icon from "../../components/icons/Icon";
 import Badge from "../../components/common/Badge/Badge";
+import { formatCurrency } from "../../utils/CurrencyUtils";
 
 export default function ProductDetails() {
 	const { id } = useParams();
@@ -48,7 +49,7 @@ export default function ProductDetails() {
 
 	return (
 		<Page>
-			<Button variant="secondary" onClick={() => navigate(-1)}>
+			<Button variant="secondary" onClick={() => navigate(-1)} size="sm">
 				<Icon name="arrowLeft" />
 			</Button>
 
@@ -66,7 +67,7 @@ export default function ProductDetails() {
 			<Space vertical size={1} />
 			<Row align="center" justify="between">
 				<Text as="strong" variant="title" boldness="bold">
-					${p.price.toFixed(2)}
+					{formatCurrency(p.price, { maximumFractionDigits: 2 })}
 				</Text>
 				{qty === 0 ? (
 					<Button onClick={addToCart}>Add to Cart</Button>

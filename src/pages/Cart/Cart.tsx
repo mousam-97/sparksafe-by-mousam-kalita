@@ -7,6 +7,7 @@ import Text from "../../components/common/Text/Text";
 import { useToast } from "../../components/common/Toast/Toast";
 import Page from "../../components/layout/Page/Page";
 import { useCart } from "../../context/CartContext";
+import { formatCurrency } from "../../utils/CurrencyUtils";
 
 export default function Cart() {
 	const { computed, removeItem, setQuantity, clear } = useCart();
@@ -35,7 +36,12 @@ export default function Cart() {
 										<Text variant="body" boldness="bold">
 											{product.name}
 										</Text>
-										<Text muted>${product.price} each</Text>
+										<Text muted>
+											{formatCurrency(product.price, {
+												maximumFractionDigits: 2,
+											})}{" "}
+											each
+										</Text>
 									</div>
 									<Row align="center" gap={2} justify="between">
 										<Row align="center" gap={2}>
@@ -61,7 +67,9 @@ export default function Cart() {
 											</Button>
 										</Row>
 										<div style={{ width: 60, textAlign: "right" }}>
-											${lineTotal.toFixed(2)}
+											{formatCurrency(lineTotal, {
+												maximumFractionDigits: 2,
+											})}
 										</div>
 										<Space size={2} />
 										<Button
@@ -81,7 +89,7 @@ export default function Cart() {
 							Subtotal
 						</Text>
 						<Text boldness="bold" variant="body">
-							${totals.subtotal.toFixed(2)}
+							{formatCurrency(totals.subtotal, { maximumFractionDigits: 2 })}
 						</Text>
 					</Row>
 					<Space vertical size={6} />

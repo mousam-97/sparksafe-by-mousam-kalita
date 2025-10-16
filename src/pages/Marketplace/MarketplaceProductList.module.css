@@ -1,0 +1,20 @@
+ .grid {
+ 	display: grid;
+ 	grid-template-columns: 1fr 1fr;
+ 	gap: var(--space-2);
+ }
+
+ /* Responsive breakpoints */
+ @media (min-width: 600px) {
+ 	.grid {
+ 		grid-template-columns: repeat(3, 1fr);
+ 	}
+ }
+
+ @media (min-width: 900px) {
+ 	.grid {
+ 		grid-template-columns: repeat(4, 1fr);
+ 	}
+ }
+
+

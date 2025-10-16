@@ -20,6 +20,15 @@ export default function Modal({ open, onClose, children }: ModalProps) {
 	return (
 		<div className={styles.backdrop} role="dialog" aria-modal="true" onClick={onClose}>
 			<div className={styles.modal} onClick={(e) => e.stopPropagation()}>
+				<button
+					type="button"
+					className={styles.closeButton}
+					aria-label="Close"
+					title="Close"
+					onClick={onClose}
+				>
+					×
+				</button>
 				{children}
 			</div>
 		</div>
