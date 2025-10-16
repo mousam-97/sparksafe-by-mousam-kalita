@@ -41,11 +41,9 @@ export default function DashboardUpgradablesDetailsModal({
 				<Badge>Difficulty: {u.estimatedDifficulty}</Badge>
 			</Row>
 
+			<Space vertical size={3} />
 			<ModalFooter>
 				<Row gap={3} justify="end">
-					<Button variant="secondary" onClick={onClose} size="sm">
-						Close
-					</Button>
 					<Button
 						variant={isDone ? "ghost" : "primary"}
 						disabled={isDone}
@@ -55,6 +53,9 @@ export default function DashboardUpgradablesDetailsModal({
 						{isDone ? "Completed" : "Mark as complete"}
 					</Button>
 				</Row>
+				<Button variant="accent" onClick={() => {}} size="sm">
+					Shop Products
+				</Button>
 			</ModalFooter>
 		</Modal>
 	);

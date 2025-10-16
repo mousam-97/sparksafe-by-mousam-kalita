@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Button.module.css";
 import cx from "classnames";
 
-type ButtonVariant = "primary" | "secondary" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "ghost" | "accent";
 type ButtonSize = "sm" | "md" | "lg";
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -19,10 +19,11 @@ export default function Button({
 	children,
 	...rest
 }: ButtonProps) {
+	const sizeClass = size === "md" ? undefined : styles[size];
 	const classNames = cx(
 		styles.button,
 		styles[variant],
-		styles[size],
+		sizeClass,
 		{ [styles.fullWidth]: fullWidth },
 		className
 	);
