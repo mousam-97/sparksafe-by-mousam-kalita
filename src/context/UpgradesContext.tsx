@@ -27,6 +27,9 @@ function mapJsonToUpgradablesMap(): { upgradesById: UpgradableMap; allUpgradeIds
 			estimatedCost: u.estimatedCost,
 			estimatedDifficulty: u.estimatedDifficulty,
 			sortOrder: typeof u.sortOrder === "number" ? u.sortOrder : undefined,
+			recommendedProducts: Array.isArray(u.recommendedProducts)
+				? (u.recommendedProducts as string[])
+				: undefined,
 		};
 		return [upgradable.id, upgradable];
 	});

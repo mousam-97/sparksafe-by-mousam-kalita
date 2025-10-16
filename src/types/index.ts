@@ -37,6 +37,7 @@ export type Upgradable = {
 	estimatedCost: "Low" | "Medium" | "High";
 	estimatedDifficulty: "Easy" | "Medium" | "Hard";
 	sortOrder?: number;
+	recommendedProducts?: string[];
 };
 
 export type UpgradableMap = Record<string, Upgradable>;
@@ -73,5 +74,3 @@ export type CartContextValue = {
 	setQuantity: (productId: string, quantity: number) => void;
 	clear: () => void;
 };
-
-

@@ -11,6 +11,7 @@ import Text from "../../components/common/Text/Text";
 import styles from "./Dashboard.module.css";
 import DashboardUpgradablesDetailsModal from "./DashboardUpgradablesDetailsModal";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useToast } from "../../components/common/Toast/Toast";
 
 // simple helper to render a decorative left icon box
@@ -24,6 +25,14 @@ export default function Dashboard() {
 	const { allUpgradeIds, upgradesById, progress, completedById, markComplete } = useUpgrades();
 	const [openId, setOpenId] = useState<string | null>(null);
 	const { showToast } = useToast();
+	const navigate = useNavigate();
+
+	function shopRecomendedProducts(upgradableId: string) {
+		const u = upgradesById[upgradableId];
+		const first = u?.recommendedProducts?.[0];
+		const q = first ? encodeURIComponent(first) : "";
+		navigate(q ? `/marketplace?q=${q}` : "/marketplace");
+	}
 
 	return (
 		<Page>
@@ -71,7 +80,11 @@ export default function Dashboard() {
 												{isDone ? "Completed" : "Mark as complete"}
 											</Button> */}
 
-											<Button variant="accent" onClick={() => {}} size="sm">
+											<Button
+												variant="accent"
+												onClick={() => shopRecomendedProducts(u.id)}
+												size="sm"
+											>
 												Shop
 											</Button>
 											<Button
@@ -99,6 +112,7 @@ export default function Dashboard() {
 						}
 					}}
 					onClose={() => setOpenId(null)}
+					shopRecomendedProducts={shopRecomendedProducts}
 				/>
 			</div>
 		</Page>

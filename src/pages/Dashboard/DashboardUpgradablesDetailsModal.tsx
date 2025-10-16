@@ -11,6 +11,7 @@ type Props = {
 	onClose: () => void;
 	onMarkComplete: (id: string) => void;
 	isDone?: boolean;
+	shopRecomendedProducts?: (upgradableId: string) => void;
 };
 
 export default function DashboardUpgradablesDetailsModal({
@@ -19,6 +20,7 @@ export default function DashboardUpgradablesDetailsModal({
 	onClose,
 	onMarkComplete,
 	isDone,
+	shopRecomendedProducts,
 }: Props) {
 	if (!upgradable) return null;
 	const u = upgradable;
@@ -53,7 +55,7 @@ export default function DashboardUpgradablesDetailsModal({
 						{isDone ? "Completed" : "Mark as complete"}
 					</Button>
 				</Row>
-				<Button variant="accent" onClick={() => {}} size="md">
+				<Button variant="accent" onClick={() => shopRecomendedProducts?.(u.id)} size="md">
 					Shop Products
 				</Button>
 			</ModalFooter>
