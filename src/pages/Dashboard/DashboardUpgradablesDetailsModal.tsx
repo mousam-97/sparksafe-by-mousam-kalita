@@ -43,13 +43,14 @@ export default function DashboardUpgradablesDetailsModal({
 
 			<ModalFooter>
 				<Row gap={3} justify="end">
-					<Button variant="secondary" onClick={onClose}>
+					<Button variant="secondary" onClick={onClose} size="sm">
 						Close
 					</Button>
 					<Button
 						variant={isDone ? "ghost" : "primary"}
 						disabled={isDone}
 						onClick={() => onMarkComplete(u.id)}
+						size="sm"
 					>
 						{isDone ? "Completed" : "Mark as complete"}
 					</Button>

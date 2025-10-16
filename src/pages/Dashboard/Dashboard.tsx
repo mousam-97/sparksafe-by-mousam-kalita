@@ -60,6 +60,7 @@ export default function Dashboard() {
 											<Button
 												variant="secondary"
 												onClick={() => setOpenId(u.id)}
+												size="sm"
 											>
 												View Details
 											</Button>
@@ -72,6 +73,7 @@ export default function Dashboard() {
 													}
 												}}
 												disabled={isDone}
+												size="sm"
 											>
 												{isDone ? "Completed" : "Mark as complete"}
 											</Button>

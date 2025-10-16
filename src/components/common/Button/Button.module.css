@@ -34,3 +34,18 @@
 	transform: translateY(1px);
 }
 
+/* sizes */
+.sm {
+	font-size: var(--font-size-sm);
+	padding: var(--space-2) var(--space-4);
+}
+
+.md {
+	/* inherits defaults from .button */
+}
+
+.lg {
+	font-size: var(--font-size-lg);
+	padding: var(--space-4) var(--space-6);
+}
+
