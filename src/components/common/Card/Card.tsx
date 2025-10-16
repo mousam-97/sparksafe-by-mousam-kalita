@@ -6,12 +6,13 @@ type CardProps = {
 	children?: React.ReactNode;
 	className?: string;
 	muted?: boolean;
+	style?: React.CSSProperties;
 };
 
-export default function Card({ children, className, muted = false }: CardProps) {
+export default function Card({ children, className, muted = false, style }: CardProps) {
 	return (
-		<div className={cx(styles.card, { [styles.muted]: muted }, className)}>
-			<div>{children}</div>
+		<div className={cx(styles.card, { [styles.muted]: muted }, className)} style={style}>
+			{children}
 		</div>
 	);
 }

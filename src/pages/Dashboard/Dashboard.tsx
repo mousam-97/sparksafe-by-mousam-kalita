@@ -26,7 +26,7 @@ export default function Dashboard() {
 	const { showToast } = useToast();
 
 	return (
-		<Page title="My Wildfire Hardening Plan">
+		<Page>
 			<div>
 				<Text variant="subtitle" className={styles.sectionTitle}>
 					Overall Progress

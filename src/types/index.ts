@@ -14,6 +14,8 @@ export type Product = {
 	description?: string;
 	rating?: number;
 	reviewsCount?: number;
+	brand?: string;
+	approvalStatus?: "approved" | "pending" | "rejected";
 };
 
 export type ProductMap = Record<string, Product>;

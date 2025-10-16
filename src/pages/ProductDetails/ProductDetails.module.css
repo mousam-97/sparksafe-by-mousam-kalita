@@ -5,10 +5,20 @@
 	border-radius: var(--radius-lg);
 }
 
-.priceRow {
+.section {
+	margin-top: var(--space-4);
+}
+
+.sectionHeader {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: var(--space-4) 0;
+	padding: 12px 0;
+	border-top: 1px solid var(--color-border);
 }
 
+@media (min-width: 600px) {
+	.image {
+		height: 280px;
+	}
+}

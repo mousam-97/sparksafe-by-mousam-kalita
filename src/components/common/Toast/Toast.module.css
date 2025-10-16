@@ -10,18 +10,19 @@
 }
 
 .toast {
-	background: var(--color-surface);
-	border: 1px solid var(--color-border);
-	box-shadow: var(--shadow-md);
-	padding: var(--space-3) var(--space-4);
-	border-radius: var(--radius-md);
-	font-weight: 600;
+    background: #111827; /* slate-900 */
+    color: #fff;
+    border: 0;
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-round);
+    font-weight: 700;
+    letter-spacing: 0.2px;
 }
 
 .success {
-	background: var(--color-success-ghost, #e7f7ed);
-	color: var(--color-success, #0a7a3d);
-	border-color: var(--color-success, #0a7a3d);
+    background: #065f46; /* emerald-800 */
+    color: #ecfdf5; /* emerald-50 */
 }
 
 

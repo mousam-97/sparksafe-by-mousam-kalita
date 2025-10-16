@@ -10,6 +10,16 @@ type ProductsContextValue = {
 
 const ProductsContext = createContext<ProductsContextValue | undefined>(undefined);
 
+function categorize(title: string): string | undefined {
+	const t = title.toLowerCase();
+	if (/(vent|soffit)/.test(t)) return "Vents";
+	if (/(window)/.test(t)) return "Windows";
+	if (/(siding|stucco|trim)/.test(t)) return "Siding";
+	if (/(roof|shingle|gutter|flashing)/.test(t)) return "Roof";
+	if (/(sprinkler|nozzle|hose|controller)/.test(t)) return "Sprinklers";
+	return "Other";
+}
+
 function mapJsonToProductMap(): { productsById: ProductMap; allProductIds: string[] } {
 	const entries: [string, Product][] = productsData.map((p: any) => {
 		const product: Product = {
@@ -19,6 +29,9 @@ function mapJsonToProductMap(): { productsById: ProductMap; allProductIds: strin
 			imageUrl: p.image ?? p.imageUrl ?? "",
 			description: p.description,
 			reviewsCount: typeof p.reviews === "number" ? p.reviews : undefined,
+			category: categorize(p.title ?? p.name ?? ""),
+			brand: p.brand,
+			approvalStatus: p.approvalStatus,
 		};
 		return [product.id, product];
 	});

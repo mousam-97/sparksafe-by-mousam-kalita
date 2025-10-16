@@ -1,24 +1,204 @@
 [
-	{ "id": "p1", "image": "/logo192.png", "title": "Fire-Resistant Vent", "description": "1/8\" mesh ember-resistant vent cover for eaves and soffits.", "price": 45, "reviews": 123 },
-	{ "id": "p2", "image": "/logo192.png", "title": "Gutter Guard", "description": "Aluminum micro-mesh guards to keep debris out.", "price": 25, "reviews": 98 },
-	{ "id": "p3", "image": "/logo192.png", "title": "Class A Asphalt Shingles", "description": "UL Class A rated shingles with enhanced fire resistance.", "price": 150, "reviews": 64 },
-	{ "id": "p4", "image": "/logo192.png", "title": "Metal Roofing Panel", "description": "Noncombustible steel panel for roof retrofits.", "price": 220, "reviews": 41 },
-	{ "id": "p5", "image": "/logo192.png", "title": "Tempered Dual-Pane Window", "description": "Low-E tempered glass window for heat resistance.", "price": 500, "reviews": 87 },
-	{ "id": "p6", "image": "/logo192.png", "title": "Fiber-Cement Siding", "description": "Ignition-resistant siding board for exterior walls.", "price": 300, "reviews": 55 },
-	{ "id": "p7", "image": "/logo192.png", "title": "Stucco Mix", "description": "Exterior-grade stucco for noncombustible wall finish.", "price": 120, "reviews": 22 },
-	{ "id": "p8", "image": "/logo192.png", "title": "Garage Door Perimeter Seal", "description": "Ember-blocking weatherstrip kit for garage doors.", "price": 35, "reviews": 73 },
-	{ "id": "p9", "image": "/logo192.png", "title": "Deck Flashing Tape", "description": "Self-sealing tape for deck-to-wall connections.", "price": 28, "reviews": 44 },
-	{ "id": "p10", "image": "/logo192.png", "title": "Noncombustible Gravel", "description": "River gravel for 0–5 ft noncombustible zone.", "price": 90, "reviews": 31 },
-	{ "id": "p11", "image": "/logo192.png", "title": "Concrete Pavers", "description": "Fire-safe pavers for perimeter hardscaping.", "price": 160, "reviews": 52 },
-	{ "id": "p12", "image": "/logo192.png", "title": "Sprinkler Timer Controller", "description": "Automated controller for perimeter misting system.", "price": 140, "reviews": 47 },
-	{ "id": "p13", "image": "/logo192.png", "title": "Perimeter Misting Nozzle Kit", "description": "Brass nozzles for exterior sprinkler lines.", "price": 110, "reviews": 39 },
-	{ "id": "p14", "image": "/logo192.png", "title": "Metal Ember Screens (Roll)", "description": "1/8\" steel mesh for vents and crawl spaces.", "price": 60, "reviews": 29 },
-	{ "id": "p15", "image": "/logo192.png", "title": "Fire-Retardant Sealant", "description": "Intumescent sealant for gaps and penetrations.", "price": 22, "reviews": 68 },
-	{ "id": "p16", "image": "/logo192.png", "title": "Noncombustible Planter", "description": "Concrete planter safe for near-home placement.", "price": 55, "reviews": 26 },
-	{ "id": "p17", "image": "/logo192.png", "title": "Metal Siding Trim Kit", "description": "Noncombustible trim for siding edges.", "price": 75, "reviews": 18 },
-	{ "id": "p18", "image": "/logo192.png", "title": "Dual-Action Hose Nozzle", "description": "High-flow nozzle for defensible space maintenance.", "price": 24, "reviews": 91 },
-	{ "id": "p19", "image": "/logo192.png", "title": "Fire-Resistant Door Sweep", "description": "Under-door ember-blocking sweep.", "price": 32, "reviews": 34 },
-	{ "id": "p20", "image": "/logo192.png", "title": "Exterior Rated Ladder Hook", "description": "Mounting hardware to store ladders away from structures.", "price": 18, "reviews": 12 }
+	{
+		"id": "p1",
+		"image": "/p1.jpg",
+		"title": "Fire-Resistant Vent",
+		"description": "1/8\" mesh ember-resistant vent cover for eaves and soffits.",
+		"price": 45,
+		"reviews": 123,
+		"brand": "FireShield",
+		"approvalStatus": "approved"
+	},
+	{
+		"id": "p2",
+		"image": "/p2.jpg",
+		"title": "Gutter Guard",
+		"description": "Aluminum micro-mesh guards to keep debris out.",
+		"price": 25,
+		"reviews": 98,
+		"brand": "GuardPro",
+		"approvalStatus": "approved"
+	},
+	{
+		"id": "p3",
+		"image": "/p3.jpg",
+		"title": "Class A Asphalt Shingles",
+		"description": "UL Class A rated shingles with enhanced fire resistance.",
+		"price": 150,
+		"reviews": 64,
+		"brand": "RoofMaster",
+		"approvalStatus": "pending"
+	},
+	{
+		"id": "p4",
+		"image": "/p1.jpg",
+		"title": "Metal Roofing Panel",
+		"description": "Noncombustible steel panel for roof retrofits.",
+		"price": 220,
+		"reviews": 41,
+		"brand": "RoofMaster",
+		"approvalStatus": "approved"
+	},
+	{
+		"id": "p5",
+		"image": "/p2.jpg",
+		"title": "Tempered Dual-Pane Window",
+		"description": "Low-E tempered glass window for heat resistance.",
+		"price": 500,
+		"reviews": 87,
+		"brand": "ClearView",
+		"approvalStatus": "approved"
+	},
+	{
+		"id": "p6",
+		"image": "/p3.jpg",
+		"title": "Fiber-Cement Siding",
+		"description": "Ignition-resistant siding board for exterior walls.",
+		"price": 300,
+		"reviews": 55,
+		"brand": "SafeSiding",
+		"approvalStatus": "approved"
+	},
+	{
+		"id": "p7",
+		"image": "/p3.jpg",
+		"title": "Stucco Mix",
+		"description": "Exterior-grade stucco for noncombustible wall finish.",
+		"price": 120,
+		"reviews": 22,
+		"brand": "SolidWall",
+		"approvalStatus": "approved"
+	},
+	{
+		"id": "p8",
+		"image": "/p1.jpg",
+		"title": "Garage Door Perimeter Seal",
+		"description": "Ember-blocking weatherstrip kit for garage doors.",
+		"price": 35,
+		"reviews": 73,
+		"brand": "SealSure",
+		"approvalStatus": "approved"
+	},
+	{
+		"id": "p9",
+		"image": "/p2.jpg",
+		"title": "Deck Flashing Tape",
+		"description": "Self-sealing tape for deck-to-wall connections.",
+		"price": 28,
+		"reviews": 44,
+		"brand": "DeckGuard",
+		"approvalStatus": "approved"
+	},
+	{
+		"id": "p10",
+		"image": "/p3.jpg",
+		"title": "Noncombustible Gravel",
+		"description": "River gravel for 0–5 ft noncombustible zone.",
+		"price": 90,
+		"reviews": 31,
+		"brand": "RockSafe",
+		"approvalStatus": "approved"
+	},
+	{
+		"id": "p11",
+		"image": "/p1.jpg",
+		"title": "Concrete Pavers",
+		"description": "Fire-safe pavers for perimeter hardscaping.",
+		"price": 160,
+		"reviews": 52,
+		"brand": "PavePro",
+		"approvalStatus": "approved"
+	},
+	{
+		"id": "p12",
+		"image": "/p2.jpg",
+		"title": "Sprinkler Timer Controller",
+		"description": "Automated controller for perimeter misting system.",
+		"price": 140,
+		"reviews": 47,
+		"brand": "HydroFlow",
+		"approvalStatus": "pending"
+	},
+	{
+		"id": "p13",
+		"image": "/p3.jpg",
+		"title": "Perimeter Misting Nozzle Kit",
+		"description": "Brass nozzles for exterior sprinkler lines.",
+		"price": 110,
+		"reviews": 39,
+		"brand": "HydroFlow",
+		"approvalStatus": "approved"
+	},
+	{
+		"id": "p14",
+		"image": "/p1.jpg",
+		"title": "Metal Ember Screens (Roll)",
+		"description": "1/8\" steel mesh for vents and crawl spaces.",
+		"price": 60,
+		"reviews": 29,
+		"brand": "MeshGuard",
+		"approvalStatus": "approved"
+	},
+	{
+		"id": "p15",
+		"image": "/p2.jpg",
+		"title": "Fire-Retardant Sealant",
+		"description": "Intumescent sealant for gaps and penetrations.",
+		"price": 22,
+		"reviews": 68,
+		"brand": "SealSure",
+		"approvalStatus": "approved"
+	},
+	{
+		"id": "p16",
+		"image": "/p3.jpg",
+		"title": "Noncombustible Planter",
+		"description": "Concrete planter safe for near-home placement.",
+		"price": 55,
+		"reviews": 26,
+		"brand": "StoneForm",
+		"approvalStatus": "approved"
+	},
+	{
+		"id": "p17",
+		"image": "/p1.jpg",
+		"title": "Metal Siding Trim Kit",
+		"description": "Noncombustible trim for siding edges.",
+		"price": 75,
+		"reviews": 18,
+		"brand": "SafeSiding",
+		"approvalStatus": "rejected"
+	},
+	{
+		"id": "p18",
+		"image": "/p2.jpg",
+		"title": "Dual-Action Hose Nozzle",
+		"description": "High-flow nozzle for defensible space maintenance.",
+		"price": 24,
+		"reviews": 91,
+		"brand": "FlowMax",
+		"approvalStatus": "approved"
+	},
+	{
+		"id": "p19",
+		"image": "/p3.jpg",
+		"title": "Fire-Resistant Door Sweep",
+		"description": "Under-door ember-blocking sweep.",
+		"price": 32,
+		"reviews": 34,
+		"brand": "SealSure",
+		"approvalStatus": "approved"
+	},
+	{
+		"id": "p20",
+		"image": "/p1.jpg",
+		"title": "Exterior Rated Ladder Hook",
+		"description": "Mounting hardware to store ladders away from structures.",
+		"price": 18,
+		"reviews": 12,
+		"brand": "SafeHang",
+		"approvalStatus": "approved"
+	}
 ]
 
 

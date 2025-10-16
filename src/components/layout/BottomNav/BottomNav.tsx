@@ -12,7 +12,7 @@ export default function BottomNav() {
 		iconName: "dashboard" | "store" | "user" | "cart";
 	}[] = [
 		{ label: "Dashboard", to: "/", end: true, iconName: "dashboard" },
-		{ label: "Marketplace", to: "/marketplace", iconName: "store" },
+		{ label: "Store", to: "/marketplace", iconName: "store" },
 		{ label: "Profile", to: "/profile", iconName: "user" },
 		{ label: "Cart", to: "/cart", iconName: "cart" },
 	];

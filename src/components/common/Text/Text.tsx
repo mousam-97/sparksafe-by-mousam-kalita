@@ -9,8 +9,10 @@ type TextProps = {
 	variant?: TextVariant;
 	muted?: boolean;
 	align?: "left" | "center" | "right";
+	boldness?: "normal" | "semiBold" | "bold";
 	className?: string;
 	as?: React.ElementType;
+	cssStyle?: React.CSSProperties;
 };
 
 export default function Text({
@@ -18,8 +20,10 @@ export default function Text({
 	variant = "body",
 	muted = false,
 	align = "left",
+	boldness,
 	className,
 	as = "p",
+	cssStyle,
 }: TextProps) {
 	const Component = as as any;
 	return (
@@ -28,8 +32,10 @@ export default function Text({
 				styles.base,
 				styles[variant],
 				{ [styles.muted]: muted, [styles.center]: align === "center" },
+				boldness ? styles[boldness] : undefined,
 				className
 			)}
+			style={cssStyle}
 		>
 			{children}
 		</Component>
