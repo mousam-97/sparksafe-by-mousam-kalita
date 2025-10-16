@@ -50,9 +50,21 @@ The app will start in development mode, typically at `http://localhost:3000`.
 - Accessibility: semantic buttons/labels and keyboard support (e.g., Enter to trigger search).
 
 ## Stretch Goals Completed
-
 1. "Add to Cart" functionality using React state
 2. Progress bar updates after marking a task complete
+
+
+## Demo images
+![Preview](public/app-demo-pics/demo1.JPG)
+![Preview](public/app-demo-pics/demo2.JPG)
+![Preview](public/app-demo-pics/demo3.JPG)
+![Preview](public/app-demo-pics/demo4.JPG)
+![Preview](public/app-demo-pics/demo5.JPG)
+![Preview](public/app-demo-pics/demo6.JPG)
+![Preview](public/app-demo-pics/demo7.JPG)
+![Preview](public/app-demo-pics/demo8.JPG)
+![Preview](public/app-demo-pics/demo9.JPG)
+![Preview](public/app-demo-pics/demo10.JPG)
 
 
 
