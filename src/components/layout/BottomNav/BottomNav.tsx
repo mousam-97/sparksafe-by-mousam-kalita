@@ -18,7 +18,7 @@ export default function BottomNav() {
 	];
 
 	return (
-		<nav className={styles.bar} aria-label="Main">
+		<nav className={styles.bar} aria-label="Main navigation">
 			{navItems.map(({ label, to, end, iconName }) => (
 				<NavLink
 					key={to}

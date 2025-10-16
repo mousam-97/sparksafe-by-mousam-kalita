@@ -8,7 +8,8 @@
 		"details": "Clear leaves, dead plants, and pine needles. Keep trees trimmed and shrubs pruned.",
 		"estimatedCost": "Low",
 		"estimatedDifficulty": "Medium",
-		"sortOrder": 1
+		"sortOrder": 1,
+		"recommendedProducts": ["Noncombustible Gravel"]
 	},
 	{
 		"id": "u2",
@@ -19,7 +20,8 @@
 		"details": "Choose metal or fire-resistant guards; clean gutters twice a year.",
 		"estimatedCost": "Low",
 		"estimatedDifficulty": "Easy",
-		"sortOrder": 3
+		"sortOrder": 3,
+		"recommendedProducts": ["Gutter Guard"]
 	},
 	{
 		"id": "u3",
@@ -30,7 +32,8 @@
 		"details": "Tempered glass withstands higher heat and reduces breakage risk.",
 		"estimatedCost": "High",
 		"estimatedDifficulty": "Hard",
-		"sortOrder": 6
+		"sortOrder": 6,
+		"recommendedProducts": ["Tempered Dual-Pane Window"]
 	},
 	{
 		"id": "u4",
@@ -41,7 +44,8 @@
 		"details": "Seal gaps and maintain roof-to-wall junctions to block ember intrusion.",
 		"estimatedCost": "High",
 		"estimatedDifficulty": "Hard",
-		"sortOrder": 7
+		"sortOrder": 7,
+		"recommendedProducts": ["Metal Roofing Panel"]
 	},
 	{
 		"id": "u5",
@@ -52,7 +56,8 @@
 		"details": "Prioritize eaves, soffit, and foundation vents to reduce ember entry.",
 		"estimatedCost": "Medium",
 		"estimatedDifficulty": "Medium",
-		"sortOrder": 2
+		"sortOrder": 2,
+		"recommendedProducts": ["Fire-Resistant Vent"]
 	},
 	{
 		"id": "u6",
@@ -63,7 +68,8 @@
 		"details": "Avoid vinyl or untreated wood near ground level; maintain 6-inch clearance.",
 		"estimatedCost": "High",
 		"estimatedDifficulty": "Hard",
-		"sortOrder": 8
+		"sortOrder": 8,
+		"recommendedProducts": ["Fiber-Cement Siding"]
 	},
 	{
 		"id": "u7",
@@ -74,7 +80,8 @@
 		"details": "Move mulch, wood piles, and combustible decor outside 5 feet.",
 		"estimatedCost": "Medium",
 		"estimatedDifficulty": "Medium",
-		"sortOrder": 4
+		"sortOrder": 4,
+		"recommendedProducts": ["Concrete Pavers"]
 	},
 	{
 		"id": "u8",
@@ -85,7 +92,8 @@
 		"details": "Check weatherstripping and add bottom seal; ensure self-closing functionality.",
 		"estimatedCost": "Low",
 		"estimatedDifficulty": "Easy",
-		"sortOrder": 5
+		"sortOrder": 5,
+		"recommendedProducts": ["Garage Door Perimeter Seal"]
 	},
 	{
 		"id": "u9",
@@ -96,7 +104,8 @@
 		"details": "Clean debris between boards; add metal flashing at deck-to-wall connections.",
 		"estimatedCost": "Medium",
 		"estimatedDifficulty": "Medium",
-		"sortOrder": 9
+		"sortOrder": 9,
+		"recommendedProducts": ["Deck Flashing Tape"]
 	},
 	{
 		"id": "u10",
@@ -107,7 +116,8 @@
 		"details": "Automate with timer; prioritize roof edges, eaves, and defensible space zones.",
 		"estimatedCost": "Medium",
 		"estimatedDifficulty": "Medium",
-		"sortOrder": 10
+		"sortOrder": 10,
+		"recommendedProducts": ["Sprinkler Timer Controller"]
 	}
 ]
 

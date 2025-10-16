@@ -9,6 +9,7 @@ import { useToast } from "../../components/common/Toast/Toast";
 import Row, { Space } from "../../components/common/Grid/Grid";
 import Text from "../../components/common/Text/Text";
 import List, { ListItem } from "../../components/common/List/List";
+import Icon from "../../components/icons/Icon";
 
 export default function ProductDetails() {
 	const { id } = useParams();
@@ -46,6 +47,10 @@ export default function ProductDetails() {
 
 	return (
 		<Page>
+			<Button variant="secondary" onClick={() => navigate(-1)}>
+				<Icon name="arrowLeft" />
+			</Button>
+			<Space vertical size={2} />
 			<img className={styles.image} src={hero} alt={p.name} />
 			<Row columnDirection gap={1}>
 				<Text as="h2" variant="title">

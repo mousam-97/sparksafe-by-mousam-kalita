@@ -6,11 +6,13 @@ import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import Profile from "./pages/Profile/Profile";
 import Cart from "./pages/Cart/Cart";
 import BottomNav from "./components/layout/BottomNav/BottomNav";
+import TopNav from "./components/layout/TopNav/TopNav";
 import "./styles/globals.css";
 
 export default function App() {
 	return (
 		<BrowserRouter>
+			<TopNav />
 			<Routes>
 				<Route path="/" element={<Dashboard />} />
 				<Route path="/marketplace" element={<Marketplace />} />
