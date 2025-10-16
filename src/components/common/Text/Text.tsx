@@ -2,11 +2,9 @@ import React from "react";
 import styles from "./Text.module.css";
 import cx from "classnames";
 
-type TextVariant = "title" | "subtitle" | "body" | "caption";
-
 type TextProps = {
 	children?: React.ReactNode;
-	variant?: TextVariant;
+	textSize?: 1 | 2 | 3 | 4 | 5; // size1..size5 maps to xs..xl
 	muted?: boolean;
 	align?: "left" | "center" | "right";
 	boldness?: "normal" | "semiBold" | "bold";
@@ -17,7 +15,7 @@ type TextProps = {
 
 export default function Text({
 	children,
-	variant = "body",
+	textSize = 3,
 	muted = false,
 	align = "left",
 	boldness,
@@ -26,11 +24,12 @@ export default function Text({
 	cssStyle,
 }: TextProps) {
 	const Component = as as any;
+	const sizeClass = styles[`size${textSize}` as keyof typeof styles] as string | undefined;
 	return (
 		<Component
 			className={cx(
 				styles.base,
-				styles[variant],
+				sizeClass,
 				{ [styles.muted]: muted, [styles.center]: align === "center" },
 				boldness ? styles[boldness] : undefined,
 				className

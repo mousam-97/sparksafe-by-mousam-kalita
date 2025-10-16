@@ -29,8 +29,15 @@ export default function MarketplaceProductItem({ productId, onAdd }: Props) {
 					to={`/product/${productId}`}
 					style={{ textDecoration: "none", color: "inherit" }}
 				>
-					<img className={styles.image} src={imageSrc} alt={product.name} />
-					<Text variant="subtitle">{product.name}</Text>
+					<img
+						className={styles.image}
+						src={imageSrc}
+						alt={product.name}
+						loading="lazy"
+					/>
+					<Text textSize={4} boldness="semiBold">
+						{product.name}
+					</Text>
 				</Link>
 				<Space vertical size={1} />
 				<Row columnDirection>

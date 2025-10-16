@@ -33,7 +33,7 @@ export default function Cart() {
 							<Row key={product.id} align="center" justify="between" gap={3} wrap>
 								<Card style={{ width: "100%" }}>
 									<div>
-										<Text variant="body" boldness="bold">
+										<Text textSize={3} boldness="bold">
 											{product.name}
 										</Text>
 										<Text muted>
@@ -85,10 +85,10 @@ export default function Cart() {
 					</List>
 					<Space vertical size={4} />
 					<Row justify="between">
-						<Text boldness="bold" variant="body">
+						<Text boldness="bold" textSize={3}>
 							Subtotal
 						</Text>
-						<Text boldness="bold" variant="body">
+						<Text boldness="bold" textSize={3}>
 							{formatCurrency(totals.subtotal, { maximumFractionDigits: 2 })}
 						</Text>
 					</Row>

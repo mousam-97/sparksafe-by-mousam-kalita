@@ -21,8 +21,6 @@ export default function ProductDetails() {
 	const { showToast } = useToast();
 	const product = useMemo(() => (id ? getById(id) : undefined), [id, getById]);
 
-	const qty = (state.items[(product as any)?.id ?? ""] ?? 0) as number;
-
 	if (!product) {
 		// If product not found, navigate back to marketplace
 		return (
@@ -39,6 +37,7 @@ export default function ProductDetails() {
 	}
 
 	const p = product as NonNullable<typeof product>;
+	const qty = state.items[p.id] ?? 0;
 	const hero =
 		p.imageUrl || "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&q=60";
 
@@ -55,7 +54,7 @@ export default function ProductDetails() {
 
 			<img className={styles.image} src={hero} alt={p.name} />
 			<Row columnDirection gap={1}>
-				<Text as="h2" variant="title">
+				<Text as="h2" textSize={5} boldness="bold">
 					{p.name}
 				</Text>
 				{p.reviewsCount ? (
@@ -66,7 +65,7 @@ export default function ProductDetails() {
 			</Row>
 			<Space vertical size={1} />
 			<Row align="center" justify="between">
-				<Text as="strong" variant="title" boldness="bold">
+				<Text as="strong" textSize={5} boldness="bold">
 					{formatCurrency(p.price, { maximumFractionDigits: 2 })}
 				</Text>
 				{qty === 0 ? (

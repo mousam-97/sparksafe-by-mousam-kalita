@@ -37,7 +37,7 @@ export default function Dashboard() {
 	return (
 		<Page>
 			<div>
-				<Text variant="subtitle" className={styles.sectionTitle}>
+				<Text textSize={4} boldness="semiBold" className={styles.sectionTitle}>
 					Overall Progress
 				</Text>
 				<Space vertical size={2} />
@@ -62,7 +62,7 @@ export default function Dashboard() {
 										<Row align="center" justify="between" gap={3}>
 											<Row align="center" gap={3}>
 												<IconBox emoji={u.emoji ?? "🌿"} />
-												<Text variant="subtitle">
+												<Text textSize={4} boldness="semiBold">
 													{u.title}{" "}
 													{isDone ? (
 														<Badge variant="success">completed</Badge>
@@ -72,7 +72,7 @@ export default function Dashboard() {
 											<Badge variant="success">+{u.scoreGain}</Badge>
 										</Row>
 									</CardHeader>
-									<Text variant="body">{u.description}</Text>
+									<Text textSize={3}>{u.description}</Text>
 									<CardFooter>
 										<Row gap={3} justify="end">
 											<Button

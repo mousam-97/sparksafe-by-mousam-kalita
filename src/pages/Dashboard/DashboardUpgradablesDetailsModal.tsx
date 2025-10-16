@@ -27,17 +27,21 @@ export default function DashboardUpgradablesDetailsModal({
 	return (
 		<Modal open={open} onClose={onClose}>
 			<ModalHeader>
-				<Text as="div" variant="title">
+				<Text as="div" textSize={5} boldness="bold">
 					{u.title}
 				</Text>
 			</ModalHeader>
 
 			<Text>{u.details}</Text>
 			<Space vertical size={3} />
-			<Text variant="subtitle">Projected Resiliency Score Gain</Text>
+			<Text textSize={4} boldness="semiBold">
+				Projected Resiliency Score Gain
+			</Text>
 			<Text>+{u.scoreGain}</Text>
 			<Space vertical size={3} />
-			<Text variant="subtitle">Estimated Cost / Difficulty</Text>
+			<Text textSize={4} boldness="semiBold">
+				Estimated Cost / Difficulty
+			</Text>
 			<Row align="center" gap={3}>
 				<Badge variant="success">Cost: {u.estimatedCost}</Badge>
 				<Badge>Difficulty: {u.estimatedDifficulty}</Badge>

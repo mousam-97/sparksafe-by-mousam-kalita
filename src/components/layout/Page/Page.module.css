@@ -5,18 +5,10 @@
 	padding: var(--space-4);
 }
 
-.title {
-	font-weight: 800;
-	font-size: 22px;
-}
-
 @media (min-width: 720px) {
 	.wrapper {
 		max-width: 768px;
 		padding: var(--space-6);
-	}
-	.title {
-		font-size: 24px;
 	}
 }
 
