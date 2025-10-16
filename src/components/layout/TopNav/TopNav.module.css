@@ -14,12 +14,32 @@
 	text-decoration: none;
 	padding: 8px 10px;
 	border-radius: var(--radius-md);
+    position: relative;
 }
 
 .active {
 	color: var(--color-primary);
 	font-weight: 600;
 	background: color-mix(in srgb, var(--color-primary) 8%, white);
+}
+
+.cartBadge {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transform: translate(40%, -40%);
+    background: var(--color-danger);
+    color: var(--color-primary-contrast);
+    border-radius: var(--radius-round);
+    padding: 0 6px;
+    height: 18px;
+    min-width: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-xs);
+    line-height: 1;
+    box-shadow: var(--shadow-sm);
 }
 
 @media (max-width: 899px) {

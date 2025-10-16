@@ -4,8 +4,11 @@ import styles from "./BottomNav.module.css";
 import cx from "classnames";
 import Icon from "../../icons/Icon";
 import { navItems } from "../navItems";
+import { useCart } from "../../../context/CartContext";
 
 export default function BottomNav() {
+	const { computed } = useCart();
+	const uniqueCount = computed.items.length;
 	return (
 		<nav className={styles.bar} aria-label="Main navigation">
 			{navItems.map(({ label, to, end, iconName }) => (
@@ -19,6 +22,14 @@ export default function BottomNav() {
 						<Icon name={iconName} />
 					</span>
 					<span>{label}</span>
+					{iconName === "cart" && uniqueCount > 0 ? (
+						<span
+							className={styles.cartBadge}
+							aria-label={`Cart has ${uniqueCount} items`}
+						>
+							{uniqueCount}
+						</span>
+					) : null}
 				</NavLink>
 			))}
 		</nav>

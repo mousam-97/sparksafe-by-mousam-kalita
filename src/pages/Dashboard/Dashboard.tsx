@@ -31,7 +31,7 @@ export default function Dashboard() {
 		const u = upgradesById[upgradableId];
 		const first = u?.recommendedProducts?.[0];
 		const q = first ? encodeURIComponent(first) : "";
-		navigate(q ? `/marketplace?q=${q}` : "/marketplace");
+		navigate(q ? `/marketplace?q=${q}&approval=approved` : "/marketplace?approval=approved");
 	}
 
 	return (

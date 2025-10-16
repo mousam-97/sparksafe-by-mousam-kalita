@@ -6,8 +6,11 @@ import Icon from "../../icons/Icon";
 import styles from "./TopNav.module.css";
 import cx from "classnames";
 import { navItems } from "../navItems";
+import { useCart } from "../../../context/CartContext";
 
 export default function TopNav() {
+	const { computed } = useCart();
+	const uniqueCount = computed.items.length;
 	return (
 		<nav className={styles.bar} aria-label="Top navigation">
 			<Row align="center" justify="between">
@@ -26,6 +29,14 @@ export default function TopNav() {
 								<Icon name={iconName} />
 								<span>{label}</span>
 							</Row>
+							{iconName === "cart" && uniqueCount > 0 ? (
+								<span
+									className={styles.cartBadge}
+									aria-label={`Cart has ${uniqueCount} items`}
+								>
+									{uniqueCount}
+								</span>
+							) : null}
 						</NavLink>
 					))}
 				</Row>

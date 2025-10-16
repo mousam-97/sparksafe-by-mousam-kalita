@@ -23,9 +23,29 @@
 	align-items: center;
 	justify-content: center;
 	gap: var(--space-1);
+	position: relative;
 }
 
 .active {
 	color: var(--color-primary);
 	font-weight: 600;
+}
+
+.cartBadge {
+	position: absolute;
+	top: 2px;
+	right: 32px;
+	transform: translate(50%, -50%);
+	background: var(--color-danger);
+	color: var(--color-primary-contrast);
+	border-radius: var(--radius-round);
+	padding: 0 6px;
+	height: 16px;
+	min-width: 16px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 10px;
+	line-height: 1;
+	box-shadow: var(--shadow-sm);
 }
