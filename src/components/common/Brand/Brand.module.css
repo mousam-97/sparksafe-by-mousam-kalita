@@ -7,11 +7,9 @@
 .logo {
 	width: 28px;
 	height: 28px;
-	display: inline-grid;
-	place-items: center;
-	border-radius: 8px;
-	background: color-mix(in srgb, var(--color-danger) 15%, white);
-	box-shadow: var(--shadow-sm);
+	display: inline-block;
+	object-fit: contain;
+	border-radius: 4px;
 }
 
 .name {
