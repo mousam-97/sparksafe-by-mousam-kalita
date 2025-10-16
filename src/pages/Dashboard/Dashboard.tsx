@@ -43,7 +43,11 @@ export default function Dashboard() {
 				<Space vertical size={2} />
 				<ProgressBar
 					value={progress}
-					label={`You're ${progress}% of the way to a safer home!`}
+					label={
+						progress === 0
+							? "No progress yet — start your first upgrade below."
+							: `You're ${progress}% of the way to a safer home!`
+					}
 				/>
 
 				<Space vertical size={2} />
@@ -66,20 +70,6 @@ export default function Dashboard() {
 									<Text variant="body">{u.description}</Text>
 									<CardFooter>
 										<Row gap={3} justify="end">
-											{/* <Button
-												variant={isDone ? "ghost" : "primary"}
-												onClick={() => {
-													if (!isDone) {
-														markComplete(u.id);
-														showToast("Marked as complete!", "success");
-													}
-												}}
-												disabled={isDone}
-												size="sm"
-											>
-												{isDone ? "Completed" : "Mark as complete"}
-											</Button> */}
-
 											<Button
 												variant="accent"
 												onClick={() => shopRecomendedProducts(u.id)}
