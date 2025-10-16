@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import Card from "../../components/common/Card/Card";
 import Button from "../../components/common/Button/Button";
+import Icon from "../../components/icons/Icon";
 import Text from "../../components/common/Text/Text";
 import Row, { Space } from "../../components/common/Grid/Grid";
 import stylesFilters from "./MarketplaceFilters.module.css";
@@ -45,12 +46,17 @@ export default function MarketplaceFilters({
 		typeof priceMax === "number" && !Number.isNaN(priceMax) ? priceMax : allMaxPrice;
 
 	// Local draft state for filters (Apply to commit)
+	const [draftSearch, setDraftSearch] = useState<string>(search);
 	const [draftMin, setDraftMin] = useState<number>(currentMin);
 	const [draftMax, setDraftMax] = useState<number>(currentMax);
 	const [draftApproval, setDraftApproval] = useState<string>(approval);
 	const [draftBrand, setDraftBrand] = useState<string>(brand);
 
 	// Sync drafts when URL params change (external changes or initial mount)
+	useEffect(() => {
+		setDraftSearch(search);
+	}, [search]);
+
 	useEffect(() => {
 		setDraftMin(currentMin);
 	}, [currentMin]);
@@ -106,12 +112,28 @@ export default function MarketplaceFilters({
 	return (
 		<>
 			<Row justify="between" gap={2}>
-				<input
-					className={stylesFilters.searchInput}
-					placeholder="Search for products"
-					value={search}
-					onChange={(e) => setParam({ q: e.target.value })}
-				/>
+				<div className={stylesFilters.searchWrapper}>
+					<input
+						className={stylesFilters.searchInput}
+						placeholder="Search for products"
+						value={draftSearch}
+						onChange={(e) => setDraftSearch(e.target.value)}
+						onKeyDown={(e) => {
+							if (e.key === "Enter") {
+								setParam({ q: draftSearch || undefined });
+							}
+						}}
+					/>
+					<Button
+						variant="secondary"
+						className={stylesFilters.searchButton}
+						aria-label="Search"
+						onClick={() => setParam({ q: draftSearch || undefined })}
+						type="button"
+					>
+						<Icon name="search" size={20} />
+					</Button>
+				</div>
 				<Button
 					variant="secondary"
 					aria-label="Filters"

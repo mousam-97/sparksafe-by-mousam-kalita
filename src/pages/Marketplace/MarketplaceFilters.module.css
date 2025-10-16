@@ -1,9 +1,37 @@
+.searchWrapper {
+    position: relative;
+    flex: 1 1 auto;
+    overflow: hidden; /* ensure the button background doesn't spill outside */
+    border-radius: var(--radius-round);
+		height: 42px;
+}
+
 .searchInput {
-	background: var(--color-surface);
-	border: 1px solid var(--color-border);
-	border-radius: var(--radius-round);
-	padding: 10px 14px;
-	font-size: var(--font-size-sm);
+    width: 100%;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-round);
+    padding: 10px 48px 10px 14px; /* leave room for right button */
+    font-size: var(--font-size-sm);
+}
+
+.searchButton {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 40px;
+		height: 38px;
+    padding: 0; /* override shared Button padding to fit exact width */
+    border-radius: 0 var(--radius-round) var(--radius-round) 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-secondary);
+    color: var(--color-text);
+    border: none;
+    cursor: pointer;
+		font-size: var(--font-size-sm);
 }
 
 .priceBadge {
